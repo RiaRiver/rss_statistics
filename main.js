@@ -4,13 +4,15 @@ import getData from './src/utils/fetch';
 
 import { store } from './src/store';
 
-const app = document.getElementById('app');
+(async () => {
+  const app = document.getElementById('app');
 
-const data = await getData();
-store.setState('total', data.score.length);
-store.updateState(data);
-store.setState('totalActive', data.score.filter((student) => student.active).length);
+  const data = await getData();
+  store.setState('total', data.score.length);
+  store.updateState(data);
+  store.setState('totalActive', data.score.filter((student) => student.active).length);
 
-const main = new MainPage().getElement();
+  const main = new MainPage().getElement();
 
-app.append(main);
+  app.append(main);
+})();
