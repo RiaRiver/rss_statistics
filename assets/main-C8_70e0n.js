@@ -9378,9 +9378,9 @@ class TasksBlock extends Element {
   updateTasksListView(activeTask) {
     this.tasks.forEach((task) => {
       if (task.id === activeTask) {
-        task.setProperties({ "data-active": "" });
+        task.setProperties({ "data-active": "", "data-disabled": "" });
       } else {
-        task.removeProperties(["data-active"]);
+        task.removeProperties(["data-active", "data-disabled"]);
       }
     });
   }
@@ -11436,4 +11436,4 @@ const getData = async () => (await axios(options)).data;
   const main = new MainPage().getElement();
   app.append(main);
 })();
-//# sourceMappingURL=main-lCS0IE5D.js.map
+//# sourceMappingURL=main-C8_70e0n.js.map

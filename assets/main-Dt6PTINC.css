@@ -110,6 +110,10 @@ body {
   background-color: var(--accent-color);
 }
 
+.tasks__item[data-disabled] {
+  pointer-events: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .tasks__item:hover {
     color: var(--light-color);
